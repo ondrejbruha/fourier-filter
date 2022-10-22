@@ -3,17 +3,16 @@ export class Fourier {
     static dft(data){
         let len = data.length;
         let x = data;
-        let w = new ComplexNumber(Math.cos(-2*3.14/len),Math.sin(2*3.14/len));
+        let w = new ComplexNumber(Math.cos(-2*3.14/len),Math.sin(-2*3.14/len));
         let s = [];
         s.length = len;
         for(let i = 1; i < len; i++){
             s[i] = new ComplexNumber(0,0);
             for(let j = 1;j < len; j++){
-                console.log();
                 s[i] = ComplexNumber.sum(ComplexNumber.scalarMult(ComplexNumber.exp(w,(1-j)*(i-1)),x[j]),s[i]);
             }
         }
-
+        x = null;
         return s;
     }
     static amplSpectrum(s) {
@@ -26,7 +25,7 @@ export class Fourier {
         }
         return a;
     }
-    static idft(spectrum){
+    static idft(spectrum,edge){
         let len = spectrum.length;
         let s = spectrum;
         let w = new ComplexNumber(Math.cos(-2*3.14/len),Math.sin(2*3.14/len));
@@ -34,7 +33,7 @@ export class Fourier {
         y.length = len;
         let ampl = Fourier.amplSpectrum(s);
         for(let i = 0; i <len; i++){
-            if(ampl[i] < 20){
+            if(ampl[i] < edge){
                 s[i] = new ComplexNumber(0,0);
             }
         }
@@ -44,6 +43,7 @@ export class Fourier {
                 y[i] = ComplexNumber.sum(y[i],ComplexNumber.scalarMult(ComplexNumber.multiply(s[j],ComplexNumber.exp(w,(1-j)*(i-1))),1/len));
             }
         }
+        s = null;
         return y;
     }
     static realData(data){

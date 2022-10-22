@@ -16,7 +16,7 @@ export class Graph extends Component {
     }
     render(){
         return(
-            <ResponsiveContainer height={500} width={1000}>
+            <ResponsiveContainer height={300} width={600}>
                 <LineChart height={300} data={this.data}>
                     <CartesianGrid stroke={"3 3"}></CartesianGrid>
                     <XAxis dataKey={"x"}></XAxis>
