@@ -1,20 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
-import {Graph} from "./Graph";
-import {Fourier} from "./Fourier";
-import {ComplexNumber} from "./ComplexNumber";
-import {Data} from "./DataManagement";
-import {Label} from "recharts";
+import "./App.css";
+import Graph from "./Graph";
+import { useEffect, useState } from "react";
+
 
 function App() {
-    let data = new Data();
+    const [rawData, setRawData] = useState([]);
+    const [amplData, setAmplData] = useState([]);
+    const [filteredData, setFilteredData] = useState([]);
+    const [edge, setEdge] = useState(0);
+
+
+    useEffect(()=>{
+        const worker = new Worker("FourierWorker.js");
+        worker.postMessage(edge);
+        worker.onmessage = (e) =>{
+            let data = e.data;
+            setRawData(data.rawData);
+            setAmplData(data.amplData);
+            setFilteredData(data.filteredData);
+            worker.terminate();
+        };
+    },[edge]);
+
 
     return (
         <div className="App">
+            <input id={"edge"} type={"number"} onChange={()=>{setEdge(document.getElementById("edge").value);}}></input>
             <div className={"graphs"}>
-                <Graph data={data.data}></Graph>
-                <Graph data={data.ampl}></Graph>
-                <Graph data={data.filtered}></Graph>
+                <Graph data={rawData}></Graph>
+                <Graph data={amplData}></Graph>
+                <Graph data={filteredData}></Graph>
             </div>
         </div>
     );

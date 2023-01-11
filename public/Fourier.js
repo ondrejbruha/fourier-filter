@@ -1,5 +1,5 @@
-import {ComplexNumber} from "./ComplexNumber";
-export class Fourier {
+importScripts("./ComplexNumber.js");
+class Fourier {
     static randomData(){
         let data = [];
         data.length = 1000;
