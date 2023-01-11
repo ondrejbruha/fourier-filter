@@ -12,7 +12,7 @@ function App() {
 
     useEffect(()=>{
         const worker = new Worker("FourierWorker.js");
-        worker.postMessage(edge);
+        worker.postMessage([edge]);
         worker.onmessage = (e) =>{
             let data = e.data;
             setRawData(data.rawData);
@@ -25,7 +25,7 @@ function App() {
 
     return (
         <div className="App">
-            <input id={"edge"} type={"number"} onChange={()=>{setEdge(document.getElementById("edge").value);}}></input>
+            <input id={"edge"} type={"number"} onChange={()=>{setEdge(Number(document.getElementById("edge").value));}}></input>
             <div className={"graphs"}>
                 <Graph data={rawData}></Graph>
                 <Graph data={amplData}></Graph>
