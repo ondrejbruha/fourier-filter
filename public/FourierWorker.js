@@ -7,6 +7,6 @@ onmessage = (e) =>{
     let _amplSpectrum = Fourier.amplSpectrum(_spectrum);
     let _filteredData = Fourier.realData(Fourier.idft(_spectrum, e.data[0]));
     console.log(e.data[0]);
-    postMessage({rawData: _randomData, amplData: _amplSpectrum, filteredData: _filteredData})
+    postMessage({rawData: _randomData, amplData: _amplSpectrum, filteredData: _filteredData});
     console.log("End Data Computing");
 };
