@@ -2,7 +2,7 @@ importScripts("./ComplexNumber.js");
 class Fourier {
     static randomData(){
         let data = [];
-        data.length = 1000;
+        data.length = 100;
         for (let i = 0; i < data.length; i++) {
             data[i] = Math.sin(4 * i / data.length) / i * Math.sin(100 * i / data.length) * Math.random() * 5;
         }

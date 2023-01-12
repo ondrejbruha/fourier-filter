@@ -25,7 +25,7 @@ function App() {
 
     return (
         <div className="App">
-            <input id={"edge"} type={"number"} onChange={()=>{setEdge(Number(document.getElementById("edge").value));}}></input>
+            <input step={0.1} id={"edge"} type={"number"} onChange={()=>{setEdge(Number(document.getElementById("edge").value));}}></input>
             <div className={"graphs"}>
                 <Graph data={rawData}></Graph>
                 <Graph data={amplData}></Graph>
