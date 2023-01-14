@@ -10,13 +10,15 @@ function App() {
     const [filteredData, setFilteredData] = useState([]);
     const [edge, setEdge] = useState(0);
 
+    useEffect(()=>{
+        setRawData(data.data);
+    },[])
 
     useEffect(()=>{
         const worker = new Worker("FourierWorker.js");
         worker.postMessage([edge, data.data]);
         worker.onmessage = (e) =>{
             let data = e.data;
-            setRawData(data.rawData);
             setAmplData(data.amplData);
             setFilteredData(data.filteredData);
             worker.terminate();
