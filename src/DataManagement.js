@@ -3,9 +3,6 @@ import {Fourier} from "./Fourier";
 export class Data {
     constructor() {
         this.randomData();
-        this.computeSpectrum();
-        this.computeAmpl();
-        this.computeFilteredData(0);
     }
     randomData(){
         this.data = [];

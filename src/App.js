@@ -1,8 +1,9 @@
 import "./App.css";
 import Graph from "./Graph";
 import { useEffect, useState } from "react";
+import {Data} from "./DataManagement";
 
-
+let data = new Data();
 function App() {
     const [rawData, setRawData] = useState([]);
     const [amplData, setAmplData] = useState([]);
@@ -12,7 +13,7 @@ function App() {
 
     useEffect(()=>{
         const worker = new Worker("FourierWorker.js");
-        worker.postMessage([edge]);
+        worker.postMessage([edge, data.data]);
         worker.onmessage = (e) =>{
             let data = e.data;
             setRawData(data.rawData);
