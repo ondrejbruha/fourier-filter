@@ -8,7 +8,7 @@ export class Data {
         this.data = [];
         this.data.length = 1000;
         for (let i = 0; i < this.data.length; i++) {
-            this.data[i] = Math.sin(4 * i / this.data.length) / i * Math.sin(100 * i / this.data.length) * Math.random() * 5;
+            this.data[i] = Math.sin(4 * i / this.data.length)/ i * Math.sin(100 * i / this.data.length)  * Math.random() * 5;
         }
     }
     computeSpectrum(){

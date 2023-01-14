@@ -26,7 +26,8 @@ function App() {
 
     return (
         <div className="App">
-            <input step={0.1} id={"edge"} type={"number"} onChange={()=>{setEdge(Number(document.getElementById("edge").value));}}></input>
+            <input step={0.1} id={"edge"} type={"number"}></input>
+            <button onClick={()=>{setEdge(Number(document.getElementById("edge").value));}}>Filter</button>
             <div className={"graphs"}>
                 <Graph data={rawData}></Graph>
                 <Graph data={amplData}></Graph>
