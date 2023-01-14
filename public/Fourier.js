@@ -4,7 +4,7 @@ class Fourier {
         let data = [];
         data.length = 100;
         for (let i = 0; i < data.length; i++) {
-            data[i] = Math.sin(4 * i / data.length) / i * Math.sin(100 * i / data.length) * Math.random() * 5;
+            data[i] = Math.sin(4 * i / data.length) / (i * Math.sin(100 * i / data.length))* Math.random() * 5;
         }
         return data;
     }

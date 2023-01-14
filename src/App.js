@@ -16,8 +16,10 @@ function App() {
 
     useEffect(()=>{
         const worker = new Worker("FourierWorker.js");
+        let begin = Date.now();
         worker.postMessage([edge, data.data]);
         worker.onmessage = (e) =>{
+            console.log(`Computed in ${(Date.now() - begin)/1000} s`);
             let data = e.data;
             setAmplData(data.amplData);
             setFilteredData(data.filteredData);
