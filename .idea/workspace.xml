@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ec6f423-8458-4a01-94e4-b7f45d8bda33" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_01_2023_13_39_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_01_2023_13_39__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/fourier-filter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fourier-filter.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/ComplexNumber.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/ComplexNumber.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ComplexNumber.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComplexNumber.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,19 +18,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
-  }
-}]]></component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="af0574f1-2ba8-41fb-898f-05b2d4cbf4a9" />
-        <option name="url" value="https://github.com/ondrejbruha/fourier-filter.git" />
-      </UrlAndAccount>
-    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -50,7 +37,6 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/ondrejbruha/Documents/GitHub/fourier-filter",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -85,7 +71,6 @@
       <option name="presentableId" value="Default" />
       <updated>1673526233731</updated>
       <workItem from="1673526234637" duration="1059000" />
-      <workItem from="1680537657160" duration="273000" />
     </task>
     <servers />
   </component>

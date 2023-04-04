@@ -7,7 +7,7 @@ export class ComplexNumber {
         return new ComplexNumber(a.real + b.real,a.imag + b.imag);
     }
     static multiply(a,b){
-        return new ComplexNumber(a.real*b.real - a.real*b.imag + b.real*a.imag);
+        return new ComplexNumber(a.real*b.real - a.imag*b.imag, a.real*b.imag + a.imag*b.real);
     }
     static abs(a){
         return Math.sqrt(a.real*a.real + a.imag*a.imag);
